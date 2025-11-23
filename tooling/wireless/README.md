@@ -26,7 +26,7 @@ Each tool in this directory includes its own README.
 
 The classic toolkit for Wi‑Fi auditing: capture, attack, convert, and crack.
 
-→ `./aircrack-ng/`
+→ **[/aircrack-ng](./aircrack-ng/)**
 
 (Additional tools like **hcxdumptool** or **wifite** will be added later.)
 
@@ -45,12 +45,6 @@ It is about understanding:
 Every guide in this folder focuses on **why the attack works**, not only how to run it.
 
 ---
-
-## 🚀 Start Here
-
-Begin with Aircrack‑NG:
-
 → `./aircrack-ng/`
 
-More tools and techniques will be added as the wireless section grows.
-
+More tools and techniques will be added as the wireless section g
