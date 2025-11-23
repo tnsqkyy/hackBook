@@ -134,15 +134,6 @@ Notes:
 
 ---
 
-## 8. Next Steps
-
-* Try multiple attack scenarios and network setups
-* Learn PMKID attack (`hashcat -m 16800`)
-* Understand handshake formats (pcap, hccapx, pmkid)
-* Dive deeper into 802.11 frames and Layer 2 flow
-
----
-
 ## Notes
 
 This is an introductory step in wireless hacking and part of the **tnsqkyy/hackbook** project. The main repository will include categorized topics such as WiFi, Networking, Web, Linux, Privilege Escalation, and more.
