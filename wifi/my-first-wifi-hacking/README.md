@@ -16,11 +16,6 @@ List all interfaces:
 ip link
 ```
 
-Or using `iw`:
-
-```bash
-iw dev
-```
 
 Typical names:
 
