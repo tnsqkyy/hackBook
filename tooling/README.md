@@ -75,15 +75,3 @@ As Hackbook expands, tooling will integrate with:
 * Labs & walkthroughs  
 
 ---
-
-## 🚀 Start Exploring
-
-Choose a category to begin:
-
-→ **[Go to /recon](./recon/)**  
-→ **[Go to /sniffing](./sniffing/)**  
-→ **[Go to /wireless](./wireless/)**  
-→ **[Go to /password-cracking](./password-cracking/)**  
-→ **[Go to /exploitation](./exploitation/)**  
-→ **[Go to /post-exploitation](./post-exploitation/)**  
-→ **[Go to /utilities](./utilities/)**
