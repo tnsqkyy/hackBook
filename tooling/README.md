@@ -1,107 +1,89 @@
 # Tooling
 
-The **tooling** directory contains the foundational tools every pentester must understand. This section focuses on *why* each tool matters, how it works internally, and how it fits into real offensive workflows.
+The **tooling** directory contains the core tools every pentester must understand — focusing on *why* each tool matters, how it works internally, and how it fits into real offensive workflows.
 
-Pentesting is not about memorizing commands — it is about mastering the right tools and understanding the logic behind them. This section captures exactly that.
+Pentesting is not about memorizing commands. It’s about understanding the tools and the logic behind them.
 
 ---
 
 ## 🔍 Categories
 
-All tools are organized by offensive capability rather than by name. This makes the structure scalable as the Hackbook grows.
+Tools are organized by offensive capability to keep the structure scalable as Hackbook grows.
 
 ### **1. Reconnaissance & Scanning**
-
-Tools used to discover hosts, services, ports, and surface‑level information.
-
-→ `./recon/`
+Discover hosts, services, and ports.  
+→ **[Go to /recon](./recon/)**
 
 ---
 
 ### **2. Traffic Analysis & Sniffing**
-
-Tools used to capture, inspect, and analyze network packets.
-
-→ `./sniffing/`
+Capture, inspect, and analyze packets.  
+→ **[Go to /sniffing](./sniffing/)**
 
 ---
 
 ### **3. Wireless Attacks**
-
-Tools focused on WiFi hacking, 802.11 frame capture, WPA/PMKID attacks, etc.
-
+802.11 frames, WPA/PMKID attacks, WiFi exploitation.  
 → **[Go to /wireless](./wireless/)**
 
 ---
 
 ### **4. Password Cracking & Hash Attacks**
-
-Tools for brute‑forcing credentials, cracking hashes, and generating key material.
-
-→ `./password-cracking/`
+Bruteforce, hash cracking, key generation.  
+→ **[Go to /password-cracking](./password-cracking/)**
 
 ---
 
 ### **5. Exploitation Frameworks**
-
-Tools that automate exploitation or provide a modular attack environment.
-
-→ `./exploitation/`
+Modular platforms for automating exploitation.  
+→ **[Go to /exploitation](./exploitation/)**
 
 ---
 
-### **6. Post‑Exploitation & Privilege Escalation**
-
-Tools for maintaining access, escalating privileges, and lateral movement.
-
-→ `./post-exploitation/`
+### **6. Post-Exploitation & Privilege Escalation**
+Maintain access, escalate privileges, lateral movement.  
+→ **[Go to /post-exploitation](./post-exploitation/)**
 
 ---
 
 ### **7. Utilities & System Essentials**
-
-Tools and helper binaries that support the pentest process.
-
-→ `./utilities/`
+Helper tools that support the pentest workflow.  
+→ **[Go to /utilities](./utilities/)**
 
 ---
 
 ## 🧠 Philosophy
 
-Every tool in this directory includes:
+Each tool entry explains:
 
-* What the tool does
-* Why a pentester needs it
-* How it works internally (packet flow, protocol logic, OS interaction)
-* Practical real‑world usage
-* Example commands
+* What it does  
+* Why a pentester needs it  
+* How it works internally (protocols, packet flow, OS interaction)  
+* Real attacker use-cases  
+* Example commands  
 
-This is not a cheat‑sheet — it is a set of *understandings*.
+This section is about understanding, not memorization.
 
 ---
 
 ## 📈 Future Scope
 
-As Hackbook expands, tooling will integrate with other sections like:
+As Hackbook expands, tooling will integrate with:
 
-* Network fundamentals
-* Attacker methodology
-* Labs & walkthroughs
-
-The structure here is designed to scale cleanly as more tools and categories are added.
+* Network fundamentals  
+* Pentesting methodology  
+* Labs & walkthroughs  
 
 ---
 
 ## 🚀 Start Exploring
 
-Begin by choosing a category:
+Choose a category to begin:
 
-* Recon → `./recon/`
-* Sniffing → `./sniffing/`
-* Wireless → `./wireless/`
-* Password Cracking → `./password-cracking/`
-* Exploitation → `./exploitation/`
-* Post‑Exploitation → `./post-exploitation/`
-* Utilities → `./utilities/`
-
-More tools will be added as the learning journey continues.
+→ **[Go to /recon](./recon/)**  
+→ **[Go to /sniffing](./sniffing/)**  
+→ **[Go to /wireless](./wireless/)**  
+→ **[Go to /password-cracking](./password-cracking/)**  
+→ **[Go to /exploitation](./exploitation/)**  
+→ **[Go to /post-exploitation](./post-exploitation/)**  
+→ **[Go to /utilities](./utilities/)**
