@@ -1,60 +1,118 @@
 # Wireshark
 
-> "The packets never lie."
+**Wireshark** is the world's standard for network protocol analysis. Where tools like Aircrack-NG help you *capture* data, Wireshark helps you *understand* it. It translates raw packet data into a human-readable format, allowing you to see every conversation on your network at a microscopic level.
+
+This guide focuses on a core pentesting workflow: analyzing a pre-existing capture file (`.pcap`) to find interesting information.
 
 ---
 
-## 🧐 What it is
+## 📌 Overview
 
-**Wireshark** is the world's foremost and widely-used network protocol analyzer. It lets you see what's happening on your network at a microscopic level. It is the de facto (and often de jure) standard across many commercial and non-profit enterprises, government agencies, and educational institutions.
+This workflow uses Wireshark for:
 
----
+*   Opening and navigating packet capture files.
+*   Filtering out noise to isolate specific conversations.
+*   Inspecting packet layers to understand how protocols interact.
+*   Reconstructing a full TCP stream to read application data (e.g., an HTTP conversation).
+*   Exporting files or objects transferred over the network.
 
-## 🧠 Why it Matters
-
-In pentesting, visibility is everything. Wireshark provides the ground truth of network communications. You can't trust what a machine *says* it's doing; you can only trust the packets it actually sends.
-
-*   **Debugging:** Find out why network applications are not working.
-*   **Security Analysis:** Detect suspicious network activity, analyze malware traffic, and identify intrusion attempts.
-*   **Protocol Learning:** Understand how protocols like TCP/IP, DNS, and HTTP actually work by observing them in action.
+This is about turning a sea of packets into actionable intelligence.
 
 ---
 
-## ⚙️ Internal Mechanics: How Wireshark Captures
+## 1. Get a Capture File
 
-Wireshark itself doesn't capture packets; it uses a capture library to do so.
+Unlike a live capture tool, your first step is to have a `.pcap` or `.pcapng` file. These can come from:
 
-1.  **Capture Library:** On Linux/macOS, it uses `libpcap`. On Windows, it uses `Npcap` (formerly `WinPcap`).
-2.  **Promiscuous Mode:** The network interface card (NIC) is put into promiscuous mode. Normally, a NIC ignores all traffic that isn't addressed to its MAC address. In promiscuous mode, it grabs every packet it sees on the wire.
-3.  **Packet Buffering:** The capture library copies these packets into a buffer in the kernel.
-4.  **Hand-off to Wireshark:** Wireshark pulls packets from this buffer, dissects them according to its vast library of protocol dissectors, and displays them in a human-readable format.
+*   Tools like `tcpdump` or `aircrack-ng`.
+*   Downloading sample captures from online repositories (e.g., Wireshark's Sample Captures).
+*   Exporting traffic from a virtual machine or sandbox environment.
 
----
-
-## 🕵️ Real Attacker Use-Cases
-
-*   **Credential Sniffing:** On an unencrypted network (e.g., open Wi-Fi), an attacker can capture login credentials sent in cleartext by protocols like FTP, Telnet, or old HTTP sites.
-*   **Analyzing Malware C2 Traffic:** Capture traffic from a sandboxed machine infected with malware to understand its Command & Control (C2) communication patterns, heartbeat, and data exfiltration methods.
-*   **Session Hijacking:** By capturing session cookies sent over unencrypted HTTP, an attacker can impersonate a legitimate user.
-*   **VoIP Eavesdropping:** Capture and reconstruct RTP streams to listen to VoIP phone calls.
+For this guide, assume you have a file named `capture.pcap`.
 
 ---
 
-## 📊 Practical Display Filters (The "Commands" of Wireshark)
+## 2. Install Wireshark
 
-The filter bar is the most powerful feature in Wireshark. Here are concrete examples you can use to find exactly what you're looking for.
+### On Debian/Ubuntu Linux
 
-| Goal                                       | Filter Example                                     |
-| ------------------------------------------ | -------------------------------------------------- |
-| **See all traffic from/to an IP**          | `ip.addr == 8.8.8.8`                               |
-| **See traffic from a source IP**           | `ip.src == 192.168.1.104`                          |
-| **See traffic to a destination IP**        | `ip.dst == 1.1.1.1`                                |
-| **Filter for specific protocols**          | `http` or `dns` or `smb` or `ftp`                  |
-| **Find traffic on a specific port**        | `tcp.port == 443` or `udp.port == 53`              |
-| **Find HTTP POST requests (often logins)** | `http.request.method == "POST"`                    |
-| **Find DNS queries containing a name**     | `dns.qry.name contains "google"`                   |
-| **Find packets with a specific string**    | `tcp contains "password"`                          |
-| **Isolate problematic TCP packets**        | `tcp.flags.reset == 1` or `tcp.analysis.retransmission` |
-| **Combine filters (AND / OR)**             | `ip.addr == 192.168.1.1 and http`                  |
-|                                            | `dns or icmp`                                      |
+```bash
+sudo apt-get update
+sudo apt-get install wireshark
+```
+During the installation, a pop-up will ask if non-superusers should be able to capture packets. **Select `<Yes>`**.
 
+If you miss this, run `sudo dpkg-reconfigure wireshark-common`, select `<Yes>`, and add your user to the `wireshark` group:
+```bash
+sudo usermod -aG wireshark $USER
+```
+You must log out and log back in for this to take effect.
+
+### On macOS (using Homebrew)
+
+```bash
+brew install --cask wireshark
+```
+
+---
+
+## 3. Open the File & Navigate the UI
+
+Launch Wireshark and open your file (`File > Open > capture.pcap`). You will see three main panes:
+
+1.  **Packet List (Top):** A list of all packets in the capture.
+2.  **Packet Details (Middle):** The dissected layers of the currently selected packet. This is where you dig in.
+3.  **Packet Bytes (Bottom):** The raw hexadecimal and ASCII representation of the packet data.
+
+---
+
+## 4. Apply a Display Filter
+
+A raw capture is noisy. Your first real step is to filter. Type a filter in the **Apply a display filter...** bar and press Enter.
+
+| Goal                                       | Filter Example                    |
+| ------------------------------------------ | --------------------------------- |
+| **Isolate a conversation with one IP**     | `ip.addr == 8.8.8.8`              |
+| **Find all HTTP traffic**                  | `http`                            |
+| **Find DNS queries**                       | `dns`                             |
+| **Find HTTP POST requests (logins, data)** | `http.request.method == "POST"`   |
+| **Find packets containing a string**       | `tcp contains "password"`         |
+| **Isolate problematic TCP packets**        | `tcp.flags.reset == 1`            |
+
+---
+
+## 5. Inspect Packet Details
+
+Click on an interesting packet in the top pane (e.g., an HTTP packet). In the middle **Packet Details** pane, you can expand each layer:
+
+*   **Frame:** Physical layer details.
+*   **Ethernet II:** MAC addresses.
+*   **Internet Protocol Version 4 (IPv4):** Source and Destination IP addresses.
+*   **Transmission Control Protocol (TCP):** Source and Destination ports, flags (SYN, ACK).
+*   **Hypertext Transfer Protocol (HTTP):** The actual application data (e.g., `GET /index.html`).
+
+This is how you peel back the onion to see exactly what happened.
+
+---
+
+## 6. Reconstruct a TCP Stream
+
+To see a clean, human-readable conversation without packet headers, find a packet in the conversation, right-click it, and select **Follow > TCP Stream**.
+
+This opens a new window showing the full data exchange, like a script. It's the easiest way to read credentials, session cookies, or files being transferred in cleartext.
+
+---
+
+## 📚 Notes & Understanding
+
+*   **Capture vs. Display Filters:** Tools like `tcpdump` use *capture filters* (less flexible, filter before saving). Wireshark uses *display filters* (very flexible, filter after capturing).
+*   **Encryption is Key:** If traffic is encrypted with TLS (HTTPS), you will **not** be able to see the application data (like the HTTP layer) in the details or TCP stream unless you have the server's private key.
+*   **The Goal is to Reduce:** Your job as an analyst is to use filters to reduce thousands of packets down to the handful that matter.
+
+---
+
+## 🚀 Next Tutorials
+
+*   **TShark:** The command-line equivalent of Wireshark for scripting and automation.
+*   **Advanced Filtering:** Using complex logical operators and field comparisons.
+*   **Coloring Rules:** Making important traffic automatically stand out in the Packet List.
