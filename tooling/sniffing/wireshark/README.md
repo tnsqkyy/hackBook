@@ -40,11 +40,21 @@ Wireshark itself doesn't capture packets; it uses a capture library to do so.
 
 ---
 
-## 📊 Common Analysis Techniques
+## 📊 Practical Display Filters (The "Commands" of Wireshark)
 
-Instead of "commands," Wireshark is about analysis techniques.
+The filter bar is the most powerful feature in Wireshark. Here are concrete examples you can use to find exactly what you're looking for.
 
-*   **Display Filters:** The most powerful feature. Use `ip.addr == 1.1.1.1` to see packets to/from Cloudflare's DNS, or `http.request.method == "POST"` to find HTTP POST requests.
-*   **Follow TCP/UDP Stream:** Right-click a packet and choose "Follow > TCP Stream" to see the full, reconstructed conversation, stripping away all the network headers. This is essential for reading conversations.
-*   **Export Objects:** Use `File > Export Objects` to automatically extract files (like images, executables, or ZIPs) being transferred over protocols like HTTP or SMB.
-*   **Coloring Rules:** Customize packet coloring to instantly highlight interesting traffic, like red for TCP resets or black for suspicious packets.
+| Goal                                       | Filter Example                                     |
+| ------------------------------------------ | -------------------------------------------------- |
+| **See all traffic from/to an IP**          | `ip.addr == 8.8.8.8`                               |
+| **See traffic from a source IP**           | `ip.src == 192.168.1.104`                          |
+| **See traffic to a destination IP**        | `ip.dst == 1.1.1.1`                                |
+| **Filter for specific protocols**          | `http` or `dns` or `smb` or `ftp`                  |
+| **Find traffic on a specific port**        | `tcp.port == 443` or `udp.port == 53`              |
+| **Find HTTP POST requests (often logins)** | `http.request.method == "POST"`                    |
+| **Find DNS queries containing a name**     | `dns.qry.name contains "google"`                   |
+| **Find packets with a specific string**    | `tcp contains "password"`                          |
+| **Isolate problematic TCP packets**        | `tcp.flags.reset == 1` or `tcp.analysis.retransmission` |
+| **Combine filters (AND / OR)**             | `ip.addr == 192.168.1.1 and http`                  |
+|                                            | `dns or icmp`                                      |
+
