@@ -30,8 +30,11 @@ The investigation begins by examining the provided image for hidden data. Using 
 
 ```bash
 # Command to extract metadata
-exiftool ./task-files/WindowsXP.jpg
+exiftool WindowsXP.jpg
 ```
+
+![ExifTool Output](assets/images/exiftool-output.png)
+_Figure 1: Output from exiftool WindowsXP.jpg_
 
 ### Step 2: Answering the Questions
 
