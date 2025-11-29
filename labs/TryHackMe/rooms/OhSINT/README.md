@@ -33,9 +33,6 @@ The investigation begins by examining the provided image for hidden data. Using 
 exiftool ./task-files/WindowsXP.jpg
 ```
 
-*   **(Optional) ExifTool Output:**
-    *   *You can place a screenshot of the output here, e.g., `./assets/images/exiftool-cmd.png`*
-
 ### Step 2: Answering the Questions
 
 With the initial clue (the username), we can now find the answers.
