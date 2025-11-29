@@ -48,12 +48,6 @@ sudo usermod -aG wireshark $USER
 ```
 You must log out and log back in for this to take effect.
 
-### On macOS (using Homebrew)
-
-```bash
-brew install --cask wireshark
-```
-
 ---
 
 ## 3. Open the File & Navigate the UI
