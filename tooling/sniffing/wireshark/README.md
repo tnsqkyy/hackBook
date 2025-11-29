@@ -1,4 +1,4 @@
-# Wireshark
+# Wireshark <img src="./assets/images/wireshark-logo.png" width="35px" height="35px" alt="Wireshark Logo" />
 
 **Wireshark** is the world's standard for network protocol analysis. Where tools like Aircrack-NG help you *capture* data, Wireshark helps you *understand* it. It translates raw packet data into a human-readable format, allowing you to see every conversation on your network at a microscopic level.
 
@@ -37,8 +37,8 @@ For this guide, assume you have a file named `capture.pcap`.
 ### On Debian/Ubuntu Linux
 
 ```bash
-sudo apt-get update
-sudo apt-get install wireshark
+sudo apt update
+sudo apt install wireshark
 ```
 During the installation, a pop-up will ask if non-superusers should be able to capture packets. **Select `<Yes>`**.
 
