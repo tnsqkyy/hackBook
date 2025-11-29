@@ -26,7 +26,7 @@ This section details the step-by-step process used to answer the questions above
 
 ### Step 1: Initial Metadata Analysis
 
-The investigation begins by examining the provided image for hidden data. Using a tool like [**ExifTool**](tnsqkyy/hackbook/tooling/recon/exiftool/README.md) reveals the copyright holder's name, which becomes the primary pivot point for the entire challenge.
+The investigation begins by examining the provided image for hidden data. Using a tool like [**ExifTool**](../../../../tooling/recon/exiftool/README.md) reveals the copyright holder's name, which becomes the primary pivot point for the entire challenge.
 
 ```bash
 # Command to extract metadata
