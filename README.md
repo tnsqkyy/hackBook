@@ -3,8 +3,6 @@
 **Hackbook** is my personal notebook for learning ethical hacking.  
 It's where I keep notes on everything I learn: the ideas, the tests, the mistakes, and the 'aha!' moments—not just the commands.
 
-Right now, the **Tooling** section is the most complete, but I plan to grow this into a full library of hacking knowledge.
-
 ---
 
 ## Current Sections
