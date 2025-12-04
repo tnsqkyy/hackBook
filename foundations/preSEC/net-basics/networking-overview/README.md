@@ -32,7 +32,7 @@ The **Internet** is one giant, worldwide network made up of many smaller network
 <p align="center">
   <img src="./assets/images/internet_overview.png" alt="Internet Diagram" width="600"/>
   <br/>
-  <em>Figure: This diagram shows how your laptop (in Network B) uses the Internet to reach services like Github.com (in Network A) and Google.com (in Network C).</em>
+  <em>Figure 1: How your laptop (Network B) connects to services like Github (Network A) and Google (Network C) via the Internet.</em>
 </p>
 
 To get a clearer picture, look at the diagram above. You can see how different private networks (like your home network) connect to the big "Internet cloud" to talk to services hosted in other networks.
