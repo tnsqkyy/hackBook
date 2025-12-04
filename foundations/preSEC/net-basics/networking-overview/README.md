@@ -45,3 +45,35 @@ The Internet is just one giant public network made up of billions of smaller pri
 
 *   A **Private Network**: A network that is not connected to the internet (like a home or office network).
 *   A **Public Network**: A network that is connected to the internet.
+
+---
+
+### 📍 Part 3: How Devices Talk (IP and MAC Addresses)
+
+For devices to chat and keep things organized, they need a way to know who's who. Imagine trying to talk to someone if you don't even know their name!
+
+Just like us, every device on a network has two main ways to be identified: a 'name' and a 'fingerprint'. You can change your name, but your fingerprints usually stay the same. Devices work similarly: one ID can change, but the other is pretty fixed.
+
+#### **IP Addresses (Your Device's Changing 'Name')**
+
+An **IP Address** is like a temporary home address for your device on the network. It's a set of numbers, usually four groups separated by dots (like `192.168.1.1`). How these numbers are chosen can get complicated (that's 'subnetting' for another day!).
+
+The important thing is, while IP addresses can change (like moving to a new house), only one device can have that specific address on the same network at any given time.
+
+Remember private and public networks? Your device will have a **private IP address** to talk to other devices on your home network, and a **public IP address** when it talks to the Internet. Your Internet provider (ISP) gives you your public IP address (and charges you for it!).
+
+With so many devices online (Cisco once thought there'd be 50 billion by 2021!), finding unique public IP addresses is getting tough. That's because the original system, **IPv4**, only has about 4.29 billion addresses. Not enough for everyone!
+
+**IPv6** is the newer system. It looks a bit scarier (it uses letters and numbers), but it has a mind-boggling number of addresses (340 *trillion* trillion trillion!), solving the IPv4 shortage. It's also more efficient.
+
+#### **MAC Addresses (Your Device's Permanent 'Fingerprint')**
+
+Every device that connects to a network (like your WiFi card) has a special, built-in "serial number" from the factory. This is called its **MAC (Media Access Control) address**.
+
+It's a mix of numbers and letters, like `a4:c3:f0:85:ac:2d`. The first half tells you who made the device, and the second half is unique to that specific device.
+
+But here's a trick: MAC addresses can be faked or 'spoofed'. This means one device can pretend to be another by using its MAC address.
+
+This can fool poorly set-up security systems. Imagine a firewall set to trust only the admin's computer (by its MAC address). If a hacker 'spoofs' that MAC address, the firewall might think the hacker is the admin!
+
+Some places like cafes use MAC addresses to control who gets on their WiFi (or charge more for faster speeds). There might even be a lab to try this out!
