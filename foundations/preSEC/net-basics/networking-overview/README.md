@@ -29,8 +29,11 @@ Now that we know a network is just a bunch of connected devices, what exactly *i
 
 The **Internet** is one giant, worldwide network made up of many smaller networks all connected together. It's like a massive web linking millions of smaller networks.
 
-![Internet Diagram](./assets/images/internet_overview.png)
-*Figure: This diagram shows how your laptop (in Network B) uses the Internet to reach services like Github.com (in Network A) and Google.com (in Network C).*
+<p align="center">
+  <img src="./assets/images/internet_overview.png" alt="Internet Diagram" width="600"/>
+  <br/>
+  <em>Figure: This diagram shows how your laptop (in Network B) uses the Internet to reach services like Github.com (in Network A) and Google.com (in Network C).</em>
+</p>
 
 To get a clearer picture, look at the diagram above. You can see how different private networks (like your home network) connect to the big "Internet cloud" to talk to services hosted in other networks.
 
