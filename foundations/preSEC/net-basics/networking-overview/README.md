@@ -142,4 +142,4 @@ This output tells us:
 
 Think you've got it? Take a quick quiz to test your understanding of these concepts.
 
-→ **[Start the Networking Quiz](./quiz/index.html)**
+→ **[Start the Networking Quiz](https://tnsqkyy.github.io/hackbook/foundations/preSEC/net-basics/networking-overview/quiz/index.html)**
