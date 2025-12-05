@@ -38,11 +38,11 @@ I rebuild simple malware here for learning purposes, to understand how it works 
 
 What's coming next:
 
-- **Network Fundamentals** — OSI model, routing, DNS, etc.
-- **The Hacker's Workflow** — From first look to final report.
-- **Hacking Techniques** — Web, WiFi, password attacks, and more.
-- **How to Defend** — Thinking like a defender (logs, detection).
-- **More Labs** — HackTheBox, and others.
+- **Network Fundamentals** - OSI model, routing, DNS, etc.
+- **The Hacker's Workflow** - From first look to final report.
+- **Hacking Techniques** - Web, WiFi, password attacks, and more.
+- **How to Defend** - Thinking like a defender (logs, detection).
+- **More Labs** - HackTheBox, and others.
 
 ---
 
