@@ -18,7 +18,7 @@ Aircrack-NG is a collection of tools used for:
 *   Getting captures ready for cracking.
 *   Trying to crack the password with a wordlist.
 
-This guide focuses on *how* it all works, not just what to type.
+This guide focuses on **how** it all works, not just what to type.
 
 ---
 

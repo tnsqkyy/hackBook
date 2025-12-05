@@ -1,6 +1,6 @@
 # Wireshark <img src="./assets/images/wireshark-logo.png" width="35px" height="35px" alt="Wireshark Logo" />
 
-**Wireshark** is like a microscope for your network. While other tools *capture* the data, Wireshark helps you *understand* it. It takes the raw 1s and 0s flying across your network and translates them into a human-readable format, letting you see every conversation up close.
+**Wireshark** is like a microscope for your network. While other tools **capture** the data, Wireshark helps you **understand** it. It takes the raw 1s and 0s flying across your network and translates them into a human-readable format, letting you see every conversation up close.
 
 This guide shows you how to use Wireshark to look through a captured file (`.pcap`) and find interesting stuff.
 
@@ -99,7 +99,7 @@ This pops up a new window with the entire conversation laid out like a script. I
 
 ## 📚 Key Things to Remember
 
-*   **Capture vs. Display Filters:** A *capture filter* (like in `tcpdump`) throws away packets as they come in. A *display filter* (in Wireshark) just hides packets, so you can always change your filter and see everything again.
+*   **Capture vs. Display Filters:** A **capture filter** (like in `tcpdump`) throws away packets as they come in. A **display filter** (in Wireshark) just hides packets, so you can always change your filter and see everything again.
 *   **Encryption is the Enemy:** If you see `TLS` (for HTTPS), the conversation is encrypted. You **cannot** read the data inside unless you have the server's secret key.
 *   **Your Goal is to Filter:** A good analyst can take 100,000 packets and use filters to find the 5 important ones.
 

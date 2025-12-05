@@ -1,6 +1,6 @@
 # Tooling
 
-The **tooling** section is all about the tools of the trade. For every tool, I focus on *why* it's important, how it works, and how it's used in a real hacking scenario.
+The **tooling** section is all about the tools of the trade. For every tool, I focus on **why** it's important, how it works, and how it's used in a real hacking scenario.
 
 Hacking is not about memorizing commands. It’s about understanding the tools and the logic behind them.
 
