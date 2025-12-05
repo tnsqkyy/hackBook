@@ -103,3 +103,36 @@ But here's a trick: **MAC addresses can be faked or 'spoofed'**. This means one 
 This can fool poorly set-up security systems. Imagine a firewall set to trust only the admin's computer (by its MAC address). If a hacker 'spoofs' that MAC address, the firewall might think the hacker is the admin!
 
 Some places like cafes use MAC addresses to control who gets on their WiFi (or charge more for faster speeds). There might even be a lab to try this out!
+
+---
+
+## 4. Ping (How to Test Connections)
+
+**Ping** is one of the most basic and useful network tools you can use. It uses a special type of message called an **ICMP (Internet Control Message Protocol) packet** to check if another device on the network is 'alive' and how good the connection is.
+
+Think of it like shouting "Hello!" in a big room and waiting to hear the echo. Ping sends an "echo request" (the "Hello!") to another device. If that device is online, it sends back an "echo reply" (the echo). Ping measures how long it took for the echo to come back. This time is called the **latency**.
+
+<p align="center">
+  <img src="./assets/images/icmp-echo-diagram.png" alt="ICMP Echo Diagram" width="600"/>
+  <br/>
+  <em>Figure 6: How Ping works: sending an Echo Request and receiving an Echo Reply.</em>
+</p>
+
+You can `ping` any device on a network, whether it's another computer on your home network or a website like Google. The tool is built into almost every operating system, including Windows, macOS, and Linux. The command is super simple:
+
+```bash
+ping <IP address or website>
+```
+
+For example, if we run `ping 8.8.8.8` (Google's public DNS server), here's what the output might look like:
+
+<p align="center">
+  <img src="./assets/images/ping-command-output.png" alt="Ping Command Output" width="600"/>
+  <br/>
+  <em>Figure 7: Example output from running the 'ping' command.</em>
+</p>
+
+This output tells us:
+*   We sent **5 packets** and all **5 were received**, meaning **0% packet loss**. The connection is stable!
+*   The average **round-trip time (RTT)** was `32.894 ms`, which is fast for an internet connection.
+
