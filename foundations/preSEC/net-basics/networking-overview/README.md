@@ -4,7 +4,7 @@
 
 ---
 
-### 🌍 Part 1: What is a Network?
+## 1. What is a Network?
 
 The main idea of a **network** is simple: it's all about **connection**. It's just a bunch of different things connected to each other. A good example is your **group of friends**—you're all connected by things you have in common.
 
@@ -23,7 +23,7 @@ Because computer networks are a huge part of our daily lives—running everythin
 
 ---
 
-### 🌐 Part 2: What is the Internet?
+## 2. What is the Internet?
 
 Now that we know a network is just a bunch of connected devices, what exactly *is* the **Internet**?
 
@@ -48,13 +48,13 @@ The Internet is just one giant public network made up of billions of smaller pri
 
 ---
 
-### 📍 Part 3: How Devices Talk (IP and MAC Addresses)
+## 3. How Devices Talk on a Network
 
 For devices to chat and keep things organized, they need a way to know **who's who**. Imagine trying to talk to someone if you don't even know their name!
 
 Just like us, every device on a network has two main ways to be identified: a '**name**' and a '**fingerprint**'. You can change your name, but your fingerprints usually stay the same. Devices work similarly: one ID can change, but the other is pretty fixed.
 
-#### **IP Addresses (Your Device's Changing 'Name')**
+### 3.1. IP Addresses (Your Device's Changing 'Name')
 
 An **IP Address** is like a temporary home address for your device on the network. It's a set of numbers, usually **four groups separated by dots** (like `192.168.1.1`).
 
@@ -86,7 +86,7 @@ With so many devices online (Cisco once thought there'd be 50 billion by 2021!),
   <em>Figure 4: A comparison of IPv4 and IPv6 address formats.</em>
 </p>
 
-#### **MAC Addresses (Your Device's Permanent 'Fingerprint')**
+### 3.2. MAC Addresses (Your Device's Permanent 'Fingerprint')
 
 Every device that connects to a network (like your WiFi card) has a special, built-in "**serial number**" from the factory. This is called its **MAC (Media Access Control) address**.
 
