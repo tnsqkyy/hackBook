@@ -23,37 +23,37 @@
     <form id="quiz-form">
         <div class="question">
             <p>1. What is the permanent, factory-assigned address of a network device called?</p>
-            <label><input type="radio" name="q1" value="a"> a) IP Address</label>
-            <label><input type="radio" name="q1" value="b"> b) MAC Address</label>
-            <label><input type="radio" name="q1" value="c"> c) Home Address</label>
+            <label><input type="radio" name="q1" value="A"> A. IP Address</label>
+            <label><input type="radio" name="q1" value="B"> B. MAC Address</label>
+            <label><input type="radio" name="q1" value="C"> C. Home Address</label>
         </div>
 
         <div class="question">
             <p>2. Which protocol does the "ping" command use to test connectivity?</p>
-            <label><input type="radio" name="q2" value="a"> a) HTTP</label>
-            <label><input type="radio" name="q2" value="b"> b) TCP</label>
-            <label><input type="radio" name="q2" value="c"> c) ICMP</label>
+            <label><input type="radio" name="q2" value="A"> A. HTTP</label>
+            <label><input type="radio" name="q2" value="B"> B. TCP</label>
+            <label><input type="radio" name="q2" value="C"> C. ICMP</label>
         </div>
 
         <div class="question">
             <p>3. What is the main problem with the IPv4 addressing system?</p>
-            <label><input type="radio" name="q3" value="a"> a) It's too slow.</label>
-            <label><input type="radio" name="q3" value="b"> b) It's running out of available addresses.</label>
-            <label><input type="radio" name="q3" value="c"> c) It's not secure.</label>
+            <label><input type="radio" name="q3" value="A"> A. It's too slow.</label>
+            <label><input type="radio" name="q3" value="B"> B. It's running out of available addresses.</label>
+            <label><input type="radio" name="q3" value="C"> C. It's not secure.</label>
         </div>
 
         <div class="question">
             <p>4. Your home network is an example of a:</p>
-            <label><input type="radio" name="q4" value="a"> a) Public Network</label>
-            <label><input type="radio" name="q4" value="b"> b) Private Network</label>
-            <label><input type="radio" name="q4" value="c"> c) Global Network</label>
+            <label><input type="radio" name="q4" value="A"> A. Public Network</label>
+            <label><input type="radio" name="q4" value="B"> B. Private Network</label>
+            <label><input type="radio" name="q4" value="C"> C. Global Network</label>
         </div>
 
         <div class="question">
             <p>5. What is the process of faking a MAC address called?</p>
-            <label><input type="radio" name="q5" value="a"> a) Hacking</label>
-            <label><input type="radio" name="q5" value="b"> b) Spoofing</label>
-            <label><input type="radio" name="q5" value="c"> c) Routing</label>
+            <label><input type="radio" name="q5" value="A"> A. Hacking</label>
+            <label><input type="radio" name="q5" value="B"> B. Spoofing</label>
+            <label><input type="radio" name="q5" value="C"> C. Routing</label>
         </div>
 
         <button type="submit">Check My Answers</button>
@@ -63,14 +63,15 @@
 
     <script>
         document.getElementById('quiz-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting the traditional way
+            event.preventDefault(); // Prevent form from submitting normally
 
+            // Correct answers now match the values A/B/C
             const correctAnswers = {
-                q1: 'b',
-                q2: 'c',
-                q3: 'b',
-                q4: 'b',
-                q5: 'b'
+                q1: 'B',
+                q2: 'C',
+                q3: 'B',
+                q4: 'B',
+                q5: 'B'
             };
 
             let score = 0;
