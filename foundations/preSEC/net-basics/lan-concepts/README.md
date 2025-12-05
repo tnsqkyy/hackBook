@@ -180,4 +180,4 @@ After this handshake, the device has its own unique IP address and can start com
 
 Ready to check your understanding? Try this short quiz.
 
-→ **[Start the Networking Quiz](https://tnsqkyy.github.io/hackbook/foundations/preSEC/net-basics/lan-concepts/quiz/index.html)**
+→ **[Start the LAN concepts Quiz](https://tnsqkyy.github.io/hackbook/foundations/preSEC/net-basics/lan-concepts/quiz/index.html)**
