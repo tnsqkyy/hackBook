@@ -36,7 +36,7 @@ These applications work at Layer 7 and provide the familiar graphical interfaces
 This layer also defines important rules (**protocols**) that applications use to communicate. A great example is **DNS (Domain Name System)**. DNS is like the internet's phonebook—it translates easy-to-remember website names (like `google.com`) into the numerical **IP addresses** that computers actually use (e.g., `172.217.160.142`). Without DNS, you'd have to type long numbers to visit your favorite sites!
 
 <p align="center">
-  <img src="./assets/images/application-layer-google-drive.jpg" alt="Application Layer Google Drive" width="600"/>
+  <img src="./assets/images/application-layer-youtube-browser.jpg" alt="Application Layer YouTube" width="600"/>
   <br/>
-  <em>Figure 2: A computer screen displaying Google Drive in a web browser, illustrating a common Layer 7 interaction.</em>
+  <em>Figure 2: A computer screen displaying YouTube in a web browser, illustrating a common Layer 7 interaction.</em>
 </p>
