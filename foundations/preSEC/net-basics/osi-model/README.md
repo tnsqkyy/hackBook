@@ -38,5 +38,5 @@ This layer also defines important rules (**protocols**) that applications use to
 <p align="center">
   <img src="./assets/images/application-layer-youtube-browser.jpg" alt="Application Layer YouTube" width="600"/>
   <br/>
-  <em>Figure 2: A computer screen displaying YouTube in a web browser, illustrating a common Layer 7 interaction.</em>
+  <em>Figure 2: YouTube open in a browser, showing a Layer 7 interaction.</em>
 </p>
