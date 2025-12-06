@@ -40,3 +40,43 @@ This layer also defines important rules (**protocols**) that applications use to
   <br/>
   <em>Figure 2: YouTube open in a browser, showing a Layer 7 interaction.</em>
 </p>
+
+---
+
+## 2. Layer 6 — Presentation
+
+The **Presentation Layer** (Layer 6) is where the magic of data standardization happens in the OSI model. Think of it as the universal translator and formatter for your data.
+
+Imagine you're trying to read a document that's in a file format your computer doesn't understand—you'd need a special program to convert it, right? That's exactly what the Presentation Layer does for network communication! It makes sure that data sent from one application (like an email client) is transformed into a format that the receiving application can actually understand and display, even if they are completely different programs.
+
+This layer sits between the **Application Layer** (Layer 7), where your apps live, and the rest of the network. Its main job is to ensure that different systems can "speak the same language" when it comes to how data looks. For example, it handles things like:
+
+*   **Data Formatting:** Converting data into a standard format (like ASCII, JPEG, or MPEG) so that different devices can interpret it correctly.
+*   **Data Compression:** Making data smaller for faster transmission across the network.
+*   **Data Encryption/Decryption:** Adding a layer of security by encrypting data before it's sent and decrypting it upon arrival. This is where secure connections like **HTTPS** (for secure websites) operate, protecting your sensitive information.
+
+So, whether you're sending an email, browsing a secure website, or opening a picture, the Presentation Layer is working behind the scenes to make sure the data is properly prepared for its journey and correctly understood at its destination.
+
+<p align="center">
+  <img src="./assets/images/osi-layer-6-presentation-diagram.jpg" alt="OSI Layer 6 Presentation Diagram" width="600"/>
+  <br/>
+  <em>Figure 3: How the Presentation Layer (Layer 6) translates, formats, and encrypts data.</em>
+</p>
+
+---
+
+## 3. Layer 5 — Session
+
+The **Session Layer** (Layer 5) is the network's conversation manager. Once your data has been properly formatted and encrypted by the Presentation Layer, this layer steps in to open up a direct line of communication with the computer on the other end.
+
+Its main job is to create, manage, and tear down a **session**—which is just a dedicated, private conversation between two devices. Before any data starts flowing, the Session Layer makes sure both computers are ready and synchronized.
+
+One of its most important jobs is to make data transfers more reliable. It does this by breaking large amounts of data into smaller chunks. But here's the cool part: it sets **checkpoints** as it sends these chunks.
+
+Think of it like saving your progress in a video game. If your internet connection suddenly drops while you're downloading a huge file, you don't have to start the download all over again from 0%. Thanks to the Session Layer, the transfer can resume from the last successful checkpoint, saving you a ton of time and frustration. It's a simple but brilliant way to make sure data gets where it's going, even if the connection isn't perfect.
+
+<p align="center">
+  <img src="./assets/images/osi-layer-5-session-diagram.jpg" alt="OSI Layer 5 Session Diagram" width="600"/>
+  <br/>
+  <em>Figure 4: The Session Layer resuming a data transfer from a checkpoint after a connection failure.</em>
+</p>
