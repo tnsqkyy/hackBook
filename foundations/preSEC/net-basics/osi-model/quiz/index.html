@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSI Model Quiz</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f7f9fc; color: #4a4a4a; }
+        h1 { color: #005A9C; }
+        .question { margin-bottom: 20px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .question:hover { transform: translateY(-3px); }
+        .question p { font-weight: bold; font-size: 1.1em; }
+        label { display: block; margin-bottom: 10px; cursor: pointer; }
+        label input { margin-right: 10px; }
+        label strong { color: #005A9C; font-weight: bold; }
+        button { background-color: #4285F4; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: background-color 0.2s; }
+        button:hover { background-color: #3367D6; }
+        #results { margin-top: 25px; font-size: 1.3em; font-weight: bold; color: #222; }
+    </style>
+</head>
+<body>
+
+    <h1>OSI Model Master Quiz</h1>
+    <p>Test your understanding of the 7 Layers, Protocols, and Data Encapsulation!</p>
+
+    <form id="quiz-form">
+        
+        <div class="question">
+            <p>1. What does OSI stand for?</p>
+            <label><input type="radio" name="q1" value="A"> <strong>A.</strong> Open Source Internet</label>
+            <label><input type="radio" name="q1" value="B"> <strong>B.</strong> Open Systems Interconnection</label>
+            <label><input type="radio" name="q1" value="C"> <strong>C.</strong> Operating System Interface</label>
+            <label><input type="radio" name="q1" value="D"> <strong>D.</strong> Optical System Integration</label>
+        </div>
+
+        <div class="question">
+            <p>2. How many layers are in the OSI model?</p>
+            <label><input type="radio" name="q2" value="A"> <strong>A.</strong> 4</label>
+            <label><input type="radio" name="q2" value="B"> <strong>B.</strong> 5</label>
+            <label><input type="radio" name="q2" value="C"> <strong>C.</strong> 7</label>
+            <label><input type="radio" name="q2" value="D"> <strong>D.</strong> 9</label>
+        </div>
+
+        <div class="question">
+            <p>3. What is the process of wrapping data with extra information as it moves down the layers?</p>
+            <label><input type="radio" name="q3" value="A"> <strong>A.</strong> Decryption</label>
+            <label><input type="radio" name="q3" value="B"> <strong>B.</strong> Routing</label>
+            <label><input type="radio" name="q3" value="C"> <strong>C.</strong> Encapsulation</label>
+            <label><input type="radio" name="q3" value="D"> <strong>D.</strong> Handshaking</label>
+        </div>
+
+        <div class="question">
+            <p>4. Which layer provides the user interface for applications like Email and Web Browsers?</p>
+            <label><input type="radio" name="q4" value="A"> <strong>A.</strong> Layer 4 (Transport)</label>
+            <label><input type="radio" name="q4" value="B"> <strong>B.</strong> Layer 7 (Application)</label>
+            <label><input type="radio" name="q4" value="C"> <strong>C.</strong> Layer 1 (Physical)</label>
+            <label><input type="radio" name="q4" value="D"> <strong>D.</strong> Layer 5 (Session)</label>
+        </div>
+
+        <div class="question">
+            <p>5. Which protocol acts as the "phonebook of the internet" at Layer 7?</p>
+            <label><input type="radio" name="q5" value="A"> <strong>A.</strong> DHCP</label>
+            <label><input type="radio" name="q5" value="B"> <strong>B.</strong> TCP</label>
+            <label><input type="radio" name="q5" value="C"> <strong>C.</strong> DNS</label>
+            <label><input type="radio" name="q5" value="D"> <strong>D.</strong> MAC</label>
+        </div>
+
+        <div class="question">
+            <p>6. What is the primary job of the Presentation Layer (Layer 6)?</p>
+            <label><input type="radio" name="q6" value="A"> <strong>A.</strong> Routing packets.</label>
+            <label><input type="radio" name="q6" value="B"> <strong>B.</strong> Data formatting, encryption, and compression.</label>
+            <label><input type="radio" name="q6" value="C"> <strong>C.</strong> Creating physical connections.</label>
+            <label><input type="radio" name="q6" value="D"> <strong>D.</strong> Managing MAC addresses.</label>
+        </div>
+
+        <div class="question">
+            <p>7. Which file format example belongs to the Presentation Layer?</p>
+            <label><input type="radio" name="q7" value="A"> <strong>A.</strong> IP Address</label>
+            <label><input type="radio" name="q7" value="B"> <strong>B.</strong> JPEG</label>
+            <label><input type="radio" name="q7" value="C"> <strong>C.</strong> Ethernet</label>
+            <label><input type="radio" name="q7" value="D"> <strong>D.</strong> Port Number</label>
+        </div>
+
+        <div class="question">
+            <p>8. What feature of the Session Layer allows a download to resume if the connection drops?</p>
+            <label><input type="radio" name="q8" value="A"> <strong>A.</strong> Routing</label>
+            <label><input type="radio" name="q8" value="B"> <strong>B.</strong> Checkpoints</label>
+            <label><input type="radio" name="q8" value="C"> <strong>C.</strong> Formatting</label>
+            <label><input type="radio" name="q8" value="D"> <strong>D.</strong> Switching</label>
+        </div>
+
+        <div class="question">
+            <p>9. Which Transport Layer protocol is reliable and checks for errors (like a Pizza Delivery with confirmation)?</p>
+            <label><input type="radio" name="q9" value="A"> <strong>A.</strong> UDP</label>
+            <label><input type="radio" name="q9" value="B"> <strong>B.</strong> IP</label>
+            <label><input type="radio" name="q9" value="C"> <strong>C.</strong> TCP</label>
+            <label><input type="radio" name="q9" value="D"> <strong>D.</strong> HTTP</label>
+        </div>
+
+        <div class="question">
+            <p>10. Which protocol is best for live video streaming or online gaming where speed is critical?</p>
+            <label><input type="radio" name="q10" value="A"> <strong>A.</strong> TCP</label>
+            <label><input type="radio" name="q10" value="B"> <strong>B.</strong> FTP</label>
+            <label><input type="radio" name="q10" value="C"> <strong>C.</strong> SMTP</label>
+            <label><input type="radio" name="q10" value="D"> <strong>D.</strong> UDP</label>
+        </div>
+
+        <div class="question">
+            <p>11. Why is TCP considered slower than UDP?</p>
+            <label><input type="radio" name="q11" value="A"> <strong>A.</strong> It uses older cables.</label>
+            <label><input type="radio" name="q11" value="B"> <strong>B.</strong> It establishes a connection and performs error-checking/recovery.</label>
+            <label><input type="radio" name="q11" value="C"> <strong>C.</strong> It encrypts all data twice.</label>
+            <label><input type="radio" name="q11" value="D"> <strong>D.</strong> It has to go through more routers.</label>
+        </div>
+
+        <div class="question">
+            <p>12. The Network Layer (Layer 3) is responsible for logical addressing and:</p>
+            <label><input type="radio" name="q12" value="A"> <strong>A.</strong> Encryption.</label>
+            <label><input type="radio" name="q12" value="B"> <strong>B.</strong> Routing (finding the best path).</label>
+            <label><input type="radio" name="q12" value="C"> <strong>C.</strong> Physical cabling.</label>
+            <label><input type="radio" name="q12" value="D"> <strong>D.</strong> Formatting text.</label>
+        </div>
+
+        <div class="question">
+            <p>13. Which hardware device operates primarily at Layer 3?</p>
+            <label><input type="radio" name="q13" value="A"> <strong>A.</strong> Hub</label>
+            <label><input type="radio" name="q13" value="B"> <strong>B.</strong> Switch</label>
+            <label><input type="radio" name="q13" value="C"> <strong>C.</strong> Router</label>
+            <label><input type="radio" name="q13" value="D"> <strong>D.</strong> Network Cable</label>
+        </div>
+
+        <div class="question">
+            <p>14. What address type is used at Layer 3 to identify a network connection?</p>
+            <label><input type="radio" name="q14" value="A"> <strong>A.</strong> MAC Address</label>
+            <label><input type="radio" name="q14" value="B"> <strong>B.</strong> IP Address</label>
+            <label><input type="radio" name="q14" value="C"> <strong>C.</strong> Email Address</label>
+            <label><input type="radio" name="q14" value="D"> <strong>D.</strong> Street Address</label>
+        </div>
+
+        <div class="question">
+            <p>15. The Data Link Layer (Layer 2) uses which address to identify devices on the SAME local network?</p>
+            <label><input type="radio" name="q15" value="A"> <strong>A.</strong> IP Address</label>
+            <label><input type="radio" name="q15" value="B"> <strong>B.</strong> Port Number</label>
+            <label><input type="radio" name="q15" value="C"> <strong>C.</strong> MAC Address</label>
+            <label><input type="radio" name="q15" value="D"> <strong>D.</strong> URL</label>
+        </div>
+
+        <div class="question">
+            <p>16. Which device is associated with Layer 2 and makes forwarding decisions based on MAC addresses?</p>
+            <label><input type="radio" name="q16" value="A"> <strong>A.</strong> Switch</label>
+            <label><input type="radio" name="q16" value="B"> <strong>B.</strong> Router</label>
+            <label><input type="radio" name="q16" value="C"> <strong>C.</strong> Hub</label>
+            <label><input type="radio" name="q16" value="D"> <strong>D.</strong> Repeater</label>
+        </div>
+
+        <div class="question">
+            <p>17. In the apartment analogy, if the IP address is the building address, the MAC address is the:</p>
+            <label><input type="radio" name="q17" value="A"> <strong>A.</strong> Name of the city.</label>
+            <label><input type="radio" name="q17" value="B"> <strong>B.</strong> Zip code.</label>
+            <label><input type="radio" name="q17" value="C"> <strong>C.</strong> Apartment number.</label>
+            <label><input type="radio" name="q17" value="D"> <strong>D.</strong> Name of the tenant.</label>
+        </div>
+
+        <div class="question">
+            <p>18. The Physical Layer (Layer 1) deals with:</p>
+            <label><input type="radio" name="q18" value="A"> <strong>A.</strong> Logical addressing.</label>
+            <label><input type="radio" name="q18" value="B"> <strong>B.</strong> User interfaces.</label>
+            <label><input type="radio" name="q18" value="C"> <strong>C.</strong> Electrical signals, light pulses, and cables.</label>
+            <label><input type="radio" name="q18" value="D"> <strong>D.</strong> Session management.</label>
+        </div>
+
+        <div class="question">
+            <p>19. Which of these is a Layer 1 component?</p>
+            <label><input type="radio" name="q19" value="A"> <strong>A.</strong> Ethernet Cable</label>
+            <label><input type="radio" name="q19" value="B"> <strong>B.</strong> Windows 10</label>
+            <label><input type="radio" name="q19" value="C"> <strong>C.</strong> Google Chrome</label>
+            <label><input type="radio" name="q19" value="D"> <strong>D.</strong> IP Protocol</label>
+        </div>
+
+        <div class="question">
+            <p>20. What is the unit of data at Layer 1?</p>
+            <label><input type="radio" name="q20" value="A"> <strong>A.</strong> Packet</label>
+            <label><input type="radio" name="q20" value="B"> <strong>B.</strong> Frame</label>
+            <label><input type="radio" name="q20" value="C"> <strong>C.</strong> Bit (1s and 0s)</label>
+            <label><input type="radio" name="q20" value="D"> <strong>D.</strong> Segment</label>
+        </div>
+
+        <div class="question">
+            <p>21. Which layer is described as the "Network's GPS"?</p>
+            <label><input type="radio" name="q21" value="A"> <strong>A.</strong> Data Link</label>
+            <label><input type="radio" name="q21" value="B"> <strong>B.</strong> Network</label>
+            <label><input type="radio" name="q21" value="C"> <strong>C.</strong> Transport</label>
+            <label><input type="radio" name="q21" value="D"> <strong>D.</strong> Session</label>
+        </div>
+
+        <div class="question">
+            <p>22. Where does HTTPS encryption happen?</p>
+            <label><input type="radio" name="q22" value="A"> <strong>A.</strong> Layer 6 (Presentation)</label>
+            <label><input type="radio" name="q22" value="B"> <strong>B.</strong> Layer 1 (Physical)</label>
+            <label><input type="radio" name="q22" value="C"> <strong>C.</strong> Layer 3 (Network)</label>
+            <label><input type="radio" name="q22" value="D"> <strong>D.</strong> Layer 2 (Data Link)</label>
+        </div>
+
+        <div class="question">
+            <p>23. If you use a web browser to visit Google.com, which layer initiates this request?</p>
+            <label><input type="radio" name="q23" value="A"> <strong>A.</strong> Layer 1</label>
+            <label><input type="radio" name="q23" value="B"> <strong>B.</strong> Layer 3</label>
+            <label><input type="radio" name="q23" value="C"> <strong>C.</strong> Layer 4</label>
+            <label><input type="radio" name="q23" value="D"> <strong>D.</strong> Layer 7</label>
+        </div>
+
+        <div class="question">
+            <p>24. Which layer ensures that two devices can speak the "same language" by translating data?</p>
+            <label><input type="radio" name="q24" value="A"> <strong>A.</strong> Application</label>
+            <label><input type="radio" name="q24" value="B"> <strong>B.</strong> Presentation</label>
+            <label><input type="radio" name="q24" value="C"> <strong>C.</strong> Transport</label>
+            <label><input type="radio" name="q24" value="D"> <strong>D.</strong> Physical</label>
+        </div>
+
+        <div class="question">
+            <p>25. The NIC (Network Interface Card) has a unique address burned into it. What is this address called?</p>
+            <label><input type="radio" name="q25" value="A"> <strong>A.</strong> Logical Address</label>
+            <label><input type="radio" name="q25" value="B"> <strong>B.</strong> IP Address</label>
+            <label><input type="radio" name="q25" value="C"> <strong>C.</strong> MAC Address</label>
+            <label><input type="radio" name="q25" value="D"> <strong>D.</strong> DNS Address</label>
+        </div>
+
+        <button type="submit">Check My Answers</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const correctAnswers = {
+                q1: 'B',  // OSI meaning
+                q2: 'C',  // 7 Layers
+                q3: 'C',  // Encapsulation
+                q4: 'B',  // Layer 7 UI
+                q5: 'C',  // DNS
+                q6: 'B',  // Layer 6 Job
+                q7: 'B',  // JPEG
+                q8: 'B',  // Checkpoints
+                q9: 'C',  // TCP Reliability
+                q10: 'D', // UDP Speed
+                q11: 'B', // TCP Overhead
+                q12: 'B', // Routing
+                q13: 'C', // Router
+                q14: 'B', // IP Address
+                q15: 'C', // MAC Address
+                q16: 'A', // Switch
+                q17: 'C', // Apartment Metaphor
+                q18: 'C', // Physical Layer definition
+                q19: 'A', // Ethernet Cable
+                q20: 'C', // Bit
+                q21: 'B', // Network GPS
+                q22: 'A', // Encryption
+                q23: 'D', // Browser initiation
+                q24: 'B', // Translation
+                q25: 'C'  // Burned Address
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            const form = event.target;
+            let resultsHTML = '';
+
+            for (const question in correctAnswers) {
+                const userAnswer = form.elements[question].value;
+                if (userAnswer === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.textContent = `You scored ${score} out of ${totalQuestions}!`;
+            
+            // Scroll to results
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
